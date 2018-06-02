@@ -1,0 +1,13 @@
+#!/bin/bash
+#
+# Recursivly delete temporary files
+#
+# Usage
+#
+# rmtmp --dry-run
+# rmtmp
+#
+
+find . -name "*~" -print0 | xargs -0 /bin/rm -fv
+find . -name "*.retry" -print0 | xargs -0 /bin/rm -fv
+
